@@ -7,7 +7,7 @@ npm install
 ```
 ## Run
 ```
-ionic start
+ionic serve
 ```
 ## Results
 You can see following results after run this project.
