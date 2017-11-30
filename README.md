@@ -1,5 +1,8 @@
 # ionic2-animation-app
 This is Ionic2 app that I used swipe animation.
+## Android APK Link
+https://www.dropbox.com/s/zu5u3nfs7j24zkn/swipe.apk?dl=0
+
 ## Installation
 Using node package manager:
 ```
