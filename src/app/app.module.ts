@@ -1,28 +1,19 @@
 import { NgModule, ErrorHandler } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { StackConfig, Stack, Card, ThrowEvent, DragEvent, SwingStackComponent, SwingCardComponent } from 'angular2-swing';
+import { SwingStackComponent, SwingCardComponent } from 'angular2-swing';
 import { Home } from '../pages/home/home';
-import { Contact } from '../pages/contact/contact';
-import { About } from '../pages/about/about';
 import { NotificationPage } from '../pages/notification/notification';
 import { ModalPage } from '../pages/modal/modal';
 import { AskPage } from '../pages/ask/ask';
 import { AnswerPage } from '../pages/answer/answer';
-import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
-
-const cloudSettings: CloudSettings = {
-  'core': {
-    'app_id': 'baa63012'
-  }
-};
 
 @NgModule({
   declarations: [
     MyApp,
     Home,
-    Contact,
-    About,
     NotificationPage,
     ModalPage,
     AskPage,
@@ -31,6 +22,7 @@ const cloudSettings: CloudSettings = {
     SwingStackComponent
   ],
   imports: [
+    BrowserModule,
     IonicModule.forRoot(MyApp, {
       menuType: 'push',
       platforms: {
@@ -46,14 +38,12 @@ const cloudSettings: CloudSettings = {
       tabsPlacement: 'bottom',
       pageTransition: 'ios'
     }),
-    CloudModule.forRoot(cloudSettings)
+    BrowserAnimationsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     Home,
-    Contact,
-    About,
     NotificationPage,
     ModalPage,
     AskPage,

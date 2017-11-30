@@ -77,7 +77,8 @@ export class Home {
   constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
     this.stackConfig = {
       throwOutConfidence: (offset, element) => {
-        return Math.min(Math.abs(offset) / (element.offsetWidth / 2), 1);
+        // return Math.min(Math.abs(offset) / (element.offsetWidth / 2), 1);
+        return Math.min(Math.abs(offset) / (600 / 2), 1);
       },
       transform: (element, x, y, r) => {
         this.onItemMove(element, x, y, r);
